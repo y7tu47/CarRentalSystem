@@ -1,0 +1,60 @@
+<!-- car-form.component.html -->
+<form [formGroup]="carForm" >
+    <div>
+      <label>Car ID:</label>
+      <input formControlName="carId" />
+    </div>
+  
+    <div>
+      <label>Brand:</label>
+      <input formControlName="brand" />
+      <div *ngIf="carForm.get('brand')?.invalid && carForm.get('brand')?.touched">
+        Brand is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Name:</label>
+      <input formControlName="name" />
+      <div *ngIf="carForm.get('name')?.invalid && carForm.get('name')?.touched">
+        Name is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Pricing:</label>
+      <input type="number" formControlName="pricing" />
+      <div *ngIf="carForm.get('pricing')?.invalid && carForm.get('pricing')?.touched">
+        Pricing must be a non-negative number
+      </div>
+    </div>
+  
+    <div>
+      <label>Location ID:</label>
+      <input formControlName="locationId" />
+    </div>
+  
+    <div>
+      <label>Registered On:</label>
+      <input type="date" formControlName="registeredOn" />
+      <div *ngIf="carForm.get('registeredOn')?.invalid && carForm.get('registeredOn')?.touched">
+        Registered date is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Vehicle No:</label>
+      <input formControlName="vehicleNo" />
+      <div *ngIf="carForm.get('vehicleNo')?.invalid && carForm.get('vehicleNo')?.touched">
+        Vehicle number is required
+      </div>
+    </div>
+  
+    <div>
+      <label>Owner User ID:</label>
+      <input formControlName="ownerUserId" />
+    </div>
+  
+    <button type="button"  (click)="createCar()">Submit</button>
+  </form>
+  

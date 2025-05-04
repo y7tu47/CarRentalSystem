@@ -1,0 +1,12 @@
+<form>
+    <label for="fruit">Choose a City:</label>
+    <select [(ngModel)]="location" name="location" id="fruit">
+        <option *ngFor="let location of locations$ | async" [value]="location.locationId">{{ location.city }}</option>
+    </select>
+
+    <button type="button" [routerLink]="['/carList', location]">Search</button>
+
+</form>
+
+<button [routerLink]="['/adminCar']">Add Car</button>
+<button [routerLink]="['/location']">Add location</button>

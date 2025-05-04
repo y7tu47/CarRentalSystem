@@ -1,0 +1,55 @@
+<form [formGroup]="bookingForm" (ngSubmit)="createbooking()">
+
+    <div>
+      <label for="bookingId">Booking ID:</label>
+      <input id="bookingId" formControlName="bookingId" type="text" />
+    </div>
+  
+    <div>
+      <label for="customerId">Customer ID:</label>
+      <input id="customerId" formControlName="customerId" type="text" />
+    </div>
+  
+    <div>
+      <label for="fromLocationId">From Location ID:</label>
+      <input id="fromLocationId" formControlName="fromLocationId" type="text" />
+    </div>
+  
+    <div>
+      <label for="toLocationId">To Location ID:</label>
+      <input id="toLocationId" formControlName="toLocationId" type="text" />
+    </div>
+  
+    <div>
+      <label for="travelDate">Travel Date:</label>
+      <input id="travelDate" formControlName="travelDate" type="date" />
+    </div>
+  
+    <div>
+      <label for="startTime">Start Time:</label>
+      <input id="startTime" formControlName="startTime" type="time" />
+    </div>
+  
+    <div>
+      <label for="carId">Car ID:</label>
+      <input id="carId" formControlName="carId" type="text" />
+    </div>
+  
+    <div>
+      <label for="pickupAddress">Pickup Address:</label>
+      <input id="pickupAddress" formControlName="pickupAddress" type="text" />
+    </div>
+  
+    <div>
+      <label for="alternateContactNo">Alternate Contact No:</label>
+      <input id="alternateContactNo" formControlName="alternateContactNo" type="tel" />
+    </div>
+  
+    <div>
+      <label for="invoiceNo">Invoice No:</label>
+      <input id="invoiceNo" formControlName="invoiceNo" type="text" />
+    </div>
+  
+    <button type="submit">Book</button>
+  </form>
+  

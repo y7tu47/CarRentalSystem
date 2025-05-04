@@ -1,0 +1,42 @@
+<!-- bulk-location-form.component.html -->
+<form [formGroup]="locationForm" (ngSubmit)="createLocation()">
+    <div >
+      <div>
+        <div>
+          <label>Location ID:</label>
+          <input formControlName="locationId" />
+        </div>
+  
+        <div>
+          <label>city:</label>
+          <input formControlName="city" />
+          <div >
+            City is required
+          </div>
+        </div>
+  
+        <div>
+          <label>title:</label>
+          <input formControlName="title" />
+          <div >
+            title is required
+          </div>
+        </div>
+
+        <div>
+            <label>pincode:</label>
+            <input formControlName="pincode" />
+            <div >
+                pincode is required
+            </div>
+          </div>
+  
+        <!-- <button type="button" (click)="removeLocation(i)" *ngIf="locations">Remove</button> -->
+      </div>
+    </div>
+  
+    <button type="button" (click)="addLocation()">Add Another Location</button>
+    <br /><br />
+    <button type="submit" [disabled]="locationForm.invalid">Submit All</button>
+  </form>
+  

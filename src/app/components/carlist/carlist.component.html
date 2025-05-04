@@ -1,0 +1,15 @@
+<table border="1">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of availableCars" [routerLink]="['/carDetail', car.carId]">
+        <td>{{car.brand}}</td>
+        <td>{{car.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

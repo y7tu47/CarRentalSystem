@@ -1,0 +1,13 @@
+#centre {
+    width: 80%;
+    margin: auto;
+}
+
+#back-btn {
+    text-decoration: none;
+}
+
+#back-btn:hover {
+    text-decoration: underline;
+}
+

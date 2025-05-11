@@ -1,0 +1,155 @@
+#center {
+    width: 60%;
+    margin: auto;
+}
+
+#search-bar {
+    border: 1px solid orange;
+    margin-bottom: 20px;
+}
+
+#filter {
+    width: 37%;
+    /* display: inline-flex; */
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+}
+
+#cars-available {
+    width: 60%;
+    /* display: inline-flex; */
+    /* border: 1px solid #e7e7e7; */
+    border-radius: 10px;
+}
+
+#filter-header {
+    /* border: 1px solid #e7e7e7; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #e7e7e7 solid;
+    width: 90%;
+    margin: auto;
+}
+
+#filter-type {
+    width: 90%;
+    margin: auto;
+    /* border-bottom: 1px #e7e7e7 solid; */
+
+    /* padding: 0 10px 10px 10px; */
+}
+#filter-and-cars-available {
+    display: flex;
+    justify-content: space-between;
+}
+
+#clear-all-filters-btn{
+    align-self: center;
+    color: blue;
+    background-color: transparent;
+    border: 0;
+    text-decoration: underline;
+}
+
+#clear-all-filters-btn:hover {
+    cursor: pointer;
+}
+
+#checkbox {
+    position: relative;
+}
+
+#checkbox-span {
+    position: absolute;
+    right: 0;
+}
+
+#sort-btn {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#categories-list {
+    width: 15%;
+    border-radius: 10px;
+    background-color: white;
+    /* border: 1px solid #e7e7e7; */
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+#categories-list-btns {
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#categories-list-btns:hover {
+    background-color: antiquewhite;
+}
+
+#car-type-category-btns {
+    background-color: transparent;
+    border: 0;    
+}
+
+#car-type-category-btns:hover {
+    background-color: aliceblue;
+}
+
+#car-info {
+    /* border: 1px solid #e7e7e7; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #e7e7e7 solid;
+    width: 90%;
+    margin: 0 auto 30px auto;
+    padding: 0 0 10px 0;
+}
+
+#pricing {
+    align-self: flex-end;
+    text-align: right;
+}
+
+#book-btn {
+    border: 0;
+    background-color: #006ce4;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#pricing {
+    position: relative;
+    right: 0;
+    width:30%
+}
+
+#car-more-info {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+}
+
+/* #form {
+    background-color: orange;
+    padding: 5px;
+}
+
+mat-form-field {
+    border: 1px solid black;
+    height: 50px;
+    width: 550px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+mat-form-field .mat-mdc-form-field-subscript-wrapper.mat-mdc-form-field-bottom-align {
+  
+    display: none !important;
+  }
+   */

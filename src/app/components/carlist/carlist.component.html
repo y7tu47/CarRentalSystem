@@ -1,15 +1,75 @@
-<table border="1">
-    <thead>
-      <tr>
-        <th>Brand</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let car of availableCars" [routerLink]="['/carDetail', car.carId]">
-        <td>{{car.brand}}</td>
-        <td>{{car.name}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div id="center">
+  <div id="search-bar">
+    <button>Edit</button>
+  </div>
+  <div id="filter-and-cars-available">
+    
+  <div id="filter">
+    <div id="filter-header">
+      <h2 style="font-weight: bold;">Filter</h2>
+      <button id="clear-all-filters-btn">Clear all filters</button>
+    </div>
+    
+    <div id="filter-type">
+      <h3>filter type</h3>
+      <div id="checkbox">
+        <label>
+          <input type="checkbox" >
+          Air<span id="checkbox-span">565</span>
+        </label>
+      </div>
+      
+    </div>
+    
+  </div>
   
+  <div id="cars-available">
+    <h2>{{carsAvailableNumber}} cars available</h2>
+    <button id="sort-btn" (click)="isSortBtnClicked()">sort by:<span *ngIf="!selectedCategory">Recommended</span> {{selectedCategory}}</button>
+    <div id="categories-list" *ngIf="sortBtnClicked">
+      <button id="categories-list-btns" *ngFor="let category of categories" (click)="selectCategory(category)">{{category}}</button>              
+    </div>
+    <div id="car-type-category">
+      <button id="car-type-category-btns" *ngFor="let carType of carTypes ">{{carType}}</button>
+    </div>
+    <div id="car-more-info">
+      <div id="car-info" *ngFor="let car of availableCars">
+        <div>
+          <h2>{{car.brand}}</h2>     
+          <p>{{car.name}}</p>
+          <p>{{car.vehicleNo}}</p>
+          <p>{{car.registeredOn}}</p>
+        </div>
+       
+        <div id="pricing">
+          <h2>EGP {{car.pricing}}</h2>
+          <p style="color: rgb(6, 250, 6);">free cancelation</p>
+          <button id="book-btn" [routerLink]="['/carDetail/'+car.carId]">Book</button>
+        </div>     
+        
+      </div>
+      More Info
+    </div>
+    
+
+  </div>
+  </div>
+  
+</div>
+
+
+<!-- <div id="form">
+  <form >
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+      
+    </mat-form-field>
+    
+    
+  </form>
+  
+</div> -->
+
+
+
